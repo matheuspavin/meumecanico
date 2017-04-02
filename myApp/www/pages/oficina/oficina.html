@@ -1,0 +1,42 @@
+
+  <ion-view view-title="Cadastro Oficina" page="Oficina">
+    <ion-content>
+      <div class="list list-inset">
+        <label class="item item-input">
+    <input type="text" placeholder="Nome" ng-model="oficina.oficina.nome">
+  </label>
+        <br>
+        <label class="item item-input">
+    <input type="text" placeholder="Descrição" ng-model="oficina.oficina.descricao">
+  </label>
+        <br>
+        <label class="item item-input">
+    <input type="text" placeholder="Descrição" ng-model="oficina.oficina.cep">
+  </label>
+        <br>
+        <label class="item item-input">
+    <input type="text" placeholder="Descrição" ng-model="oficina.oficina.cidade">
+  </label>
+        <br>
+        <label class="item item-input">
+    <input type="text" placeholder="Descrição" ng-model="oficina.oficina.bairro">
+  </label>
+        <br>
+        <label class="item item-input">
+    <input type="text" placeholder="Descrição" ng-model="oficina.oficina.telefone">
+  </label>
+        <br>
+        <label class="item item-input">
+    <input type="text" placeholder="Descrição" ng-model="oficina.oficina.zap">
+  </label>
+        <br>
+        <label class="item item-input">
+    <input type="text" placeholder="Descrição" ng-model="oficina.oficina.facebook">
+  </label>
+        <br>
+{{oficina.oficina}}
+      </div>
+
+      <button ion-button ng-click="oficina.cadastra(oficina.oficina)">Button</button>
+    </ion-content>
+  </ion-view>

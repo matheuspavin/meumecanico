@@ -1,0 +1,384 @@
+
+@font-face {
+    font-family: "Neo Sans Bold";
+    src: url('../fonts/Neo-Sans-Bold.woff') format('woff'),        /* Navegadores Modernos */
+         url('../fonts/Neo-Sans-Bold.ttf') format('truetype'),     /* Safari, Android, iOS */
+         url('../fonts/Neo-Sans-Bold.svg#forte-regular') format('svg');    /* Legado iOS */
+}
+
+@font-face {
+    font-family: "Arial Rounded";
+    src: url('../fonts/Arial-Rounded-Bold.woff') format('woff'),        /* Navegadores Modernos */
+         url('../fonts/Arial-Rounded-Bold.ttf') format('truetype'),     /* Safari, Android, iOS */
+         url('../fonts/Arial-Rounded-Bold.svg#forte-regular') format('svg');    /* Legado iOS */
+}
+
+@font-face {
+    font-family: "Helvetica Rounded";
+    src: url('../fonts/Helvetica-Rounded.woff') format('woff'),        /* Navegadores Modernos */
+         url('../fonts/Helvetica-Rounded.ttf') format('truetype'),     /* Safari, Android, iOS */
+         url('../fonts/Helvetica-Rounded.svg#forte-regular') format('svg');    /* Legado iOS */
+}
+
+@font-face {
+    font-family: "Helvetica 65 Medium";
+    src: url('../fonts/Helvetica-65-Medium.woff') format('woff'),        /* Navegadores Modernos */
+         url('../fonts/Helvetica-65-Medium.ttf') format('truetype'),     /* Safari, Android, iOS */
+         url('../fonts/Helvetica-65-Medium.svg#forte-regular') format('svg');    /* Legado iOS */
+}
+
+@font-face {
+    font-family: "Helvetica Normal Regular";
+    src: url('../fonts/Helvetica-Normal-Regular.woff') format('woff'),        /* Navegadores Modernos */
+         url('../fonts/Helvetica-Normal-Regular.ttf') format('truetype'),     /* Safari, Android, iOS */
+         url('../fonts/Helvetica-Normal-Regular.svg#forte-regular') format('svg');    /* Legado iOS */
+}
+
+@font-face {
+    font-family: "Helvetica Light";
+    src: url('../fonts/Helvetica-Light.woff') format('woff'),        /* Navegadores Modernos */
+         url('../fonts/Helvetica-Light.ttf') format('truetype'),     /* Safari, Android, iOS */
+         url('../fonts/Helvetica-Light.svg#forte-regular') format('svg');    /* Legado iOS */
+}
+
+/*override HTML*/
+hr {
+    color: #b2b2b2;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+}
+
+a {
+    text-decoration: none;
+    color: #229de4;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+}
+
+select {
+    font-family: "Helvetica Normal Regular";
+    font-size: 14px;
+}
+
+button {
+    border: none;
+}
+
+/*end override HTML*/
+
+.show-menu {
+    transform: translate3d(275px, 0px, 0px);
+    transition: 500ms;
+}
+
+.hide-menu {
+    transform: translate3d(0px, 0px, 0px);
+    transition: 500ms;
+}
+
+/*INICIO HEADER */
+
+.header{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    top:0;
+    z-index: 1;
+}
+
+.header-title{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 21px;
+    padding-left: 20px;
+}
+
+.header-title img {
+    width: 20px;
+    height: 20px;
+}
+
+.bt-close {
+    font-size: 31px;
+    color: #000;
+    opacity: 0.6;
+    margin-top: -6px;
+    display: block;
+    font-weight: bold !important;
+}
+
+.back-arrow {
+    font-size: 45px;
+    width: 38px;
+    color: #000;
+    opacity: 0.6;
+    margin-top: -13px;
+    margin-left: -7px;
+    display: block;
+}
+
+.box-title-publish {
+    margin-top: -8px;
+    display: block;
+}
+
+.header-title .title {
+    font-family: "Helvetica Rounded";
+    font-size: 13px !important;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.header-title .title.infos {
+
+}
+
+.header-title .sub-title {
+    margin-left: 7px;
+    margin-top: -2px;
+    font-family: "Helvetica Normal Regular";
+    font-size: 13px;
+    color: #FFFFFF;
+    opacity: 0.7;
+    display: block;
+}
+
+.header .user-image {
+    height: 38px;
+    width: 38px;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+.platform-ios .header{
+    height: 75px;
+    padding-top: 30px;
+}
+.header-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+
+.header-buttons div {
+    margin-left: 15px;
+}
+
+.header-buttons > div > span {
+    font-size: 37px;
+    color: #fff;
+}
+
+.user-image{
+    border: 2px solid #FFFFFF;
+}
+
+.notification-badge {
+    height: 23px;
+    width: 23px;
+    color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    text-align: center;
+    line-height: 14px;
+    margin-left: 0 !important;
+    padding-top: 2px;
+}
+
+.notification-badge span {
+    font-family: "Helvetica Normal Regular";
+    font-size: 10px;
+}
+
+/*FIM HEADER */
+
+.main-content {
+    height: 100vh;
+    overflow-y: scroll;
+    padding-bottom: 150px;
+}
+
+.no-select {
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+}
+
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.alert {
+    padding-top: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.circle{
+    border-radius: 50%;
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.muted{
+    color: #777777;
+}
+
+.center {
+    text-align: center;
+}
+
+.background-img {
+    background: url("../img/backgound-grafismo.png") 102px -244px;
+}
+
+/*cores*/
+
+.label-secondary {
+    color: #99afb8;
+}
+
+.main-bg {
+    background-color: #25a3e6;
+}
+
+.secondary-bg {
+    background-color: #f6f6f6;
+}
+
+/*links in messages*/
+
+.message-body a, .comments-text a {
+    background: url("../img/icons/icon-link.png") no-repeat 0 0;
+    min-height: 38px;
+    padding: 0 0 3px 52px;
+    margin: 5px 0;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 16px;
+    color: #229de4;
+}
+
+/*loading*/
+
+#login .loading {
+    color: #FFFFFF;
+    margin-top: 50%;
+    text-align: center;
+}
+/*togle buttons */
+
+/* caixa ao redor do slide */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 27px;
+}
+
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(20px);
+    -ms-transform: translateX(20px);
+    transform: translateX(14px);
+}
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*end toogle buttons*/
+
+/*efeito no touch nos botões*/
+.ripple{
+    position:relative;
+    overflow:hidden
+}
+
+.ripple:after{
+    content:"";
+    background:rgba(255,255,255,0.5);
+    display:block;
+    position:absolute;
+    border-radius:50%;
+    padding-top:240%;
+    padding-left:240%;
+    margin-top:-120%;
+    margin-left:-120%;
+    opacity:0;
+    transition:all 1s
+}
+
+.ripple:active:after{
+    padding-top:0;
+    padding-left:0;
+    margin-top:0;
+    margin-left:0;
+    opacity:1;
+    transition:0s
+}
+
+
+
+
