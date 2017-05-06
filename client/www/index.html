@@ -41,12 +41,16 @@
 </head>
 
 <body class="platform-android" ng-app="meuMecanico">
-
   <ion-pane>
-    <ion-header-bar class="bar-stable">
-      <div ui-view></div>
+    <ion-header-bar class="bar-stable" style="background-color: royalblue">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Meu Mecânico</h3>
+        </div>
+      </div>
     </ion-header-bar>
     <ion-content>
+      <div ui-view></div>
     </ion-content>
   </ion-pane>
 </body>
