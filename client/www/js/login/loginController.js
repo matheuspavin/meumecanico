@@ -1,17 +1,11 @@
-angular.module('meuMecanico').controller("loginController", function($scope, $state) {
-    var vm = this;
-    console.log(vm);   
+angular.module('meuMecanico').controller("loginController", ["$rootScope", "$scope", "$state", function($rootScope, $scope, $state) {
 
-    $scope.validaLogin = function (user){
-        if(user && user.email == "lucasveberdebrida@gmail.com"){
-            $scope.erro = "Usuário válido!";
-        } else{
-            $scope.erro = "Usuário não está cadastrado no sistema";
-        }
+    $scope.validaLogin = function (user) {
+        $rootScope.login(user);
     };
 
     $scope.cadastro = function(){
         $state.go("cadastro");
     };
  
-});
+}]);

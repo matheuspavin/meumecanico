@@ -9,6 +9,12 @@
                 <label>Senha</label>
                 <input type="password" class="form-control" ng-model="user.password" placeholder="Password">
             </div>
+            <div class="form-group">
+                <select class="form-control" ng-init="user.type = 'customer'" ng-model="user.type">
+                    <option value="customer">Customer</option>
+                    <option value="garage">Garage</option>
+                </select>
+            </div>
             <div class="form-groupLogin">
                 <button class="form-control btn btn-primary btn-lg btn-block btn" ng-click="validaLogin(user)">Entrar</button>
             </div>
