@@ -10,7 +10,7 @@
                 url: '/cadastro',
                 templateUrl: 'templates/cadastro.html',
                 controller: 'cadastroController'
-            })
+            });
 
         $urlRouterProvider.otherwise('/login');
     });
