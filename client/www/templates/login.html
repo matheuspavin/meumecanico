@@ -1,3 +1,34 @@
-<div></div>
-<div class="jumbotron">{{user}}</div>
-<button class="btn btn-primary">qualquer coisa</button>
+<div style="height: 100vh; width: 100vw; position: absolute;" class="background-img ">
+    <div class="container-fluid">
+        <form name="loginForm">
+            <div class="form-group">
+                <label>Login</label>
+                <input type="email" class="form-control" ng-model="user.email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" class="form-control" ng-model="user.password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <select class="form-control" ng-init="user.type = 'customer'" ng-model="user.type">
+                    <option value="customer">Customer</option>
+                    <option value="garage">Garage</option>
+                </select>
+            </div>
+            <div class="form-groupLogin">
+                <button class="form-control btn btn-primary btn-lg btn-block btn" ng-click="validaLogin(user)">Entrar</button>
+            </div>
+            <br>
+            <div class="form-groupLogin">
+                <button type="submit" class="form-control btn btn-primary btn-lg btn-block btn"
+                ng-click="cadastro()">Cadastro</button><br>
+            </div>
+            <div class="text-center">
+                <a href="#" class="text-center" ng-click="showRecoveryPassword(false)">Esqueci minha senha</a>
+            </div>
+            <div class="text-center">
+                <span>{{erro}}</span>
+            </div>
+        </form>
+    </div>
+</div>

@@ -35,17 +35,29 @@
   <!-->Controller</!-->
   <script src="js/config/route.js"></script>
   <script src="js/login/loginController.js"></script>
+  <script src="js/cadastro/cadastroController.js"></script>
+  <script src="js/home/homeController.js"></script>
+  <script src="js/config/httpConfig.js"></script>
+  <script src="js/interceptor/authenticationInterceptor.js"></script>
+	<script src="js/interceptor/tokenInterceptor.js"></script>
+  <!--Services-->
+  <script src="js/cadastro/usuarioService.js"></script>
+  <script src="js/oficina/oficinaService.js"></script>
 
   <!-- your app's js -->
 </head>
 
 <body class="platform-android" ng-app="meuMecanico">
-
   <ion-pane>
-    <ion-header-bar class="bar-stable">
-      <div ui-view></div>
+    <ion-header-bar class="bar-stable" style="background-color: royalblue">
+      <div class="row">
+        <div class="col-md-12">
+          <h3>Meu Mecânico</h3>
+        </div>
+      </div>
     </ion-header-bar>
     <ion-content>
+      <div ui-view></div>
     </ion-content>
   </ion-pane>
 </body>
