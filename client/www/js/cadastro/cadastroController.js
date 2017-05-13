@@ -1,5 +1,5 @@
-angular.module('meuMecanico').controller("cadastroController", ["$scope", "$state", "usuarioService",
-    function ($scope, $state, usuarioService) {
+angular.module('meuMecanico').controller("cadastroController", ["$scope", "$state", "usuarioService", "oficinaService",
+    function ($scope, $state, usuarioService, oficinaService) {
         $scope.erro = "banana";
 
         var init = function () {
@@ -11,12 +11,12 @@ angular.module('meuMecanico').controller("cadastroController", ["$scope", "$stat
             });
         };
 
-        $scope.cadastrarOficina = function (oficina) {
+        $scope.oficinaService = function (oficina) {
             usuarioService.cadastroOficina(oficina).then(function (response) {
                 console.log("Response: ", response.data);
             });
         };
 
         init();
-        
+
     }]);

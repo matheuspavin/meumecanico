@@ -21,4 +21,4 @@ angular.module('meuMecanico', ['ionic'])
       StatusBar.styleDefault();
     }
   });
-})
+});
