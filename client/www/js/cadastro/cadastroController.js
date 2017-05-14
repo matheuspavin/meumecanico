@@ -12,7 +12,7 @@ angular.module('meuMecanico').controller("cadastroController", ["$scope", "$stat
         };
 
         $scope.oficinaService = function (oficina) {
-            usuarioService.cadastroOficina(oficina).then(function (response) {
+            oficinaService.cadastroOficina(oficina).then(function (response) {
                 console.log("Response: ", response.data);
             });
         };

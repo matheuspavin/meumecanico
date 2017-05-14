@@ -6,10 +6,11 @@ angular.module("meuMecanico").factory("oficinaService", function ($http) {
     };
 
     var _listAll = function () {
-        return $http.get("http://localhost:8081/insert/garage");
+        return $http.get("http://localhost:8081/garage/listAll");
     };
 
     return {
         listAll: _listAll,
+        cadastroOficina: _cadastroOficina
     };
 });

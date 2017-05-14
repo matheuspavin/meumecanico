@@ -10,13 +10,7 @@ angular.module('meuMecanico').run(['$rootScope', '$http', '$window', '$state', f
         $state.go('login');
     };
 
-    $rootScope.login = function (user) {
-        var url = 'http://localhost:8081/signin';
-        $http.post(url, user).then(function (response) {
-            $window.localStorage.token = response.data;
-            $state.go('home');
-        });
-    };
+
 
     init();
 }]);

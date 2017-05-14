@@ -1,24 +1,20 @@
-<<<<<<< HEAD
-angular.module('meuMecanico').controller("homeController", ["$scope", "$http", function($scope, $http) {
-    $http.get("http://localhost:8081/garage").then(function (response) {
-        $scope.birl = response.data;
-    });
-}]);
-=======
 angular.module('meuMecanico').controller("homeController", ["$scope", "$state", "oficinaService",
     function ($scope, $state, oficinaService) {
         $scope.erro = "banana";
-
+        $scope.garages = [];
+ //$http.get("http://localhost:8081/garage").then(function (response) {
         var init = function () {
+            $scope.listAll();
         };
 
         $scope.listAll = function () {
-            usuarioService.cadastroCliente(cliente).then(function (response) {
+            oficinaService.listAll().then(function (response) {
                 console.log("Response: ", response.data);
+                $scope.garages = response.data;
+
             });
         };
 
         init();
 
     }]);
->>>>>>> lucas

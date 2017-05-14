@@ -1,2 +1,30 @@
-birl
-{{birl | json}}
+<div style=" position: absolute;" class="background-img ">
+    <div class="container-fluid">
+        <div ng-repeat="garage in garages">
+            <div style="background-color: white">
+                <div class="form-group">
+                    <p>Oficina: {{garage.name}}</p>
+                    <p>Cep: {{garage.cep}}</p>
+                    <p>Telefone: {{garage.cellphone}}</p>
+                    <p>Descrição: {{garage.description}}</p>
+                    <p class="text-center">
+                        <button type="button" class="btn btn-primary btn-sm">Visualizar Oficina</button>
+                        <button type="button" class="btn btn-primary btn-sm">Visualizar Comentários</button>
+                    </p>
+                </div>
+
+
+
+                <!--                <ion-card>
+                    <ion-card-content>
+                        <p>Oficina: {{garage.name}}</p>
+                        <p>Cep: {{garage.cep}}</p>
+                        <p>Telefone: {{garage.cellphone}}</p>
+                        <p>Descrição: {{garage.description}}</p>
+                    </ion-card-content>
+                    <p href="#" class="text-center" ng-click="showRecoveryPassword(false)">Esqueci minha senha</p>
+                </ion-card>-->
+            </div>
+        </div>
+    </div>
+</div>
