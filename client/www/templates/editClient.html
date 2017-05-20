@@ -1,0 +1,70 @@
+<div style="height: 100vh; width: 100vw; position: absolute;" class="background-img ">
+    <div>
+        <ion-content padding="true" scroll="true" drag-content="false">
+            <div class="container-fluid">
+                <form name="formClient">
+                    <div>
+                        <div class="form-group">
+                            <label>Nome</label>
+                            <input type="text" class="form-control" ng-model="client.name" placeholder="Nome">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" class="form-control" ng-model="client.email" placeholder="E-mail">
+                        </div>
+                        <!--                        <div class="form-group">
+                            <label>Senha</label>
+                            <input type="password" name="password" class="form-control" ng-model="client.password" placeholder="Senha">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirmar Senha</label>
+                            <input type="password" name="passwordConfirm" class="form-control" ng-model="client.passwordConfirm" placeholder="Confirmas Senha">
+                        </div>-->
+                        <span ng-show="client.password != client.passwordConfirm && formClient.passwordConfirm.$dirty">As senhas não correspondem</span>
+                        <div class="form-group">
+                            <label>CEP</label>
+                            <input type="text" class="form-control" ng-model="client.cep" placeholder="CEP">
+                        </div>
+                        <div class="form-group">
+                            <label>Ano Nascimento</label>
+                            <input type="number" class="form-control" ng-model="client.born_year" placeholder="Ano Nascimento">
+                        </div>
+                        <div class="form-group">
+                            <label>Profissão</label>
+                            <input type="text" class="form-control" ng-model="client.profession" placeholder="Profissão">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="radio" ng-model="client.sex" value="male">Masculino
+                            </label>
+                            <br/>
+                            <label>
+                            <input type="radio" ng-model="client.sex" value="female">Feminino
+                            </label><br/>
+                        </div>
+                        <div class="form-group">
+                            <label>Carro</label>
+                            <input type="text" class="form-control" ng-model="client.car" placeholder="Carro">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone</label>
+                            <input type="text" class="form-control" ng-model="client.cellphone" ui-mask="(48)9999-9999">
+                        </div>
+                        <div class="form-groupLogin">
+                            <button class="btn-primary btn-lg btn-block btn" ng-click="edit(client)">Atualizar</button><br>
+                        </div>
+                        <div class="form-groupLogin">
+                            <button class="btn btn-primary btn-lg btn-block" ng-click="back()">Voltar</button><br>
+                        </div>
+                    </div>
+                </form>
+                <div class="text-center">
+                    <span>{{erro}}</span>
+                </div>
+                <div class="text-center">
+                    <span>{{success}}</span>
+                </div>
+            </div>
+        </ion-content padding="false" scroll="true" drag-content="true">
+    </div>
+</div>

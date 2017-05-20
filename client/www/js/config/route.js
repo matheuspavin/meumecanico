@@ -1,6 +1,6 @@
- angular.module('meuMecanico').config(function($stateProvider, $urlRouterProvider) {
-     
-     $stateProvider
+angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvider) {
+
+    $stateProvider
         .state('login', {
             url: '/login',
             templateUrl: 'templates/login.html',
@@ -16,6 +16,16 @@
             templateUrl: 'templates/home.html',
             controller: 'homeController'
         })
+        .state('editOficina', {
+            url: '/editoficina',
+            templateUrl: 'templates/editOficina.html',
+            controller: 'oficinaController'
+        })
+        .state('editClient', {
+            url: '/editclient',
+            templateUrl: 'templates/editClient.html',
+            controller: 'clientController'
+        })
 
-        $urlRouterProvider.otherwise('/login');
-    });
+    $urlRouterProvider.otherwise('/login');
+});
