@@ -26,6 +26,22 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
             templateUrl: 'templates/editClient.html',
             controller: 'clientController'
         })
+        .state('visualizaOficina', {
+            url: '/visualizaoficina',
+            templateUrl: 'templates/visualizaOficina.html',
+            controller: 'visualizaOficinaController',
+            params: {
+                obj: null
+            }
+        })
+        .state('recomendacao', {
+            url: '/recomendacao',
+            templateUrl: 'templates/recomendacao.html',
+            controller: 'recomendacaoController',
+            params: {
+                obj: null
+            }
+        })
 
     $urlRouterProvider.otherwise('/login');
 });

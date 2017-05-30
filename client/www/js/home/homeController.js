@@ -15,7 +15,11 @@ angular.module('meuMecanico').controller("homeController", ["$scope", "$state", 
                 $scope.message = "Erro nos dados de acesso! Favor tente novamente.";
             })
         };
-
+        
+        $scope.visualizarOficina = function (selectedGarage) {
+            console.log("chamou");
+            $state.go('visualizaOficina', { obj: selectedGarage });
+        };
         init();
 
     }]);
