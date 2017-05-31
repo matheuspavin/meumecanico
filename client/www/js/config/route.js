@@ -42,6 +42,14 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
                 obj: null
             }
         })
+        .state('visualizarcomentarios', {
+            url: '/visualizarcomentarios',
+            templateUrl: 'templates/visualizarComentarios.html',
+            controller: 'reviewController',
+            params: {
+                obj: null
+            }
+        })
 
     $urlRouterProvider.otherwise('/login');
 });

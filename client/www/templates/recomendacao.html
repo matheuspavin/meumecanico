@@ -4,36 +4,48 @@
             <div class="container-fluid">
                 <div>
                     <label>Nome Oficina: </label><br>
-                    <span>{{garage.obj.name}}</span>
+                    <span>{{rec.garage.obj.name}}</span>
                 </div>
                 <hr>
                 <div>
                     <label>Usuário: </label><br>
-                    <span></span>
+                    <span>{{rec.client.name}}</span>
                 </div>
                 <hr>
                 <div class="form-group">
-                    <label>Login</label>
-                    <input type="range" class="form-control" ng-model="user.email" placeholder="Email">
-                    <input id="input" type="range" min="0" value="0" max="6" step="1">
+                    <label>Nota</label>
+                    <input type="range" class="form-control" ng-model="rec.grade" id="input" type="range" min="0" max="4"
+                        step="1">{{rec.grade}}
+                    <!--                    <div class="row">
+                        <td id="output1" style="padding:25px"></td>
+                        <td id="output2" style="padding:50px"></td>
+                        <td id="output3"><th</td>
+                        <td id="output4"></td>
+                        <td id="output5"></td>
+                    </div>-->
+                    <table style="width:100%">
+                        <tr>
+                            <th style="width: 4%"></th>  
+                            <th id="output1" style="width:22.5%"></th>
+                            <th id="output2" style="width:22%"></th>
+                            <th id="output3" style="width:22.5%"></th>
+                            <th id="output4" style="width:21.5%"></th>
+                            <th id="output5" style="width:22%"></th>
+                        </tr>
+                    </table>
                 </div>
+
                 <hr>
                 <div class="form-group">
                     <label>Recomendação:</label>
-                    <textarea class="form-control" ng-model="recomendacao.description" placeholder="Escreva aqui sua recomendação" rows="8" cols="10"></textarea>
+                    <textarea class="form-control" ng-model="rec.description" placeholder="Escreva aqui sua recomendação" rows="8" cols="10"></textarea>
                 </div>
                 <div class="form-groupLogin">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="cadastro()">Adicionar Recomenação</button><br>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="cadastro(rec)">Adicionar Recomenação</button><br>
                 </div>
                 <div class="form-groupLogin">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="home()">Voltar</button><br>
                 </div>
-                <!--                <div class="text-center">
-                    <span>{{erro}}</span>
-                </div>
-                <div class="text-center">
-                    <span>{{success}}</span>
-                </div>-->
             </div>
         </ion-content padding="false" scroll="true" drag-content="true">
     </div>

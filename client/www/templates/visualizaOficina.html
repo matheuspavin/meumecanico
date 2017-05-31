@@ -4,39 +4,39 @@
             <div class="container-fluid">
                 <div>
                     <label>Nome Oficina: </label><br>
-                    <span>{{garage.obj.name}}</span>
+                    <span>{{garage.name}}</span>
                 </div>
                 <hr>
                 <div>
                     <label>E-mail: </label><br>
-                    <span>{{garage.obj.email}}</span>
+                    <span>{{garage.email}}</span>
                 </div>
                 <hr>
                 <div>
                     <label>CEP: </label><br>
-                    <span>{{garage.obj.cep}}</span>
+                    <span>{{garage.cep}}</span>
                 </div>
                 <hr>
                 <div>
-                    <label>?: </label><br>
-                    <span>{{garage.obj.born_year}}</span>
+                    <label>Data abertura da oficina: </label><br>
+                    <span>{{garage.born_year}}</span>
                 </div>
                 <hr>
                 <div>
                     <label>Data entrada no Sistema: </label><br>
-                    <span>{{garage.obj.creation_time}}</span>
+                    <span>{{garage.creation_time | date: "dd/MM/yyyy"}}</span>
                 </div>
                 <hr>
                 <div>
                     <label>Descrição: </label><br>
-                    <span>{{garage.obj.description}}</span>
+                    <span>{{garage.description}}</span>
                 </div>
                 <br>
                 <div class="form-groupLogin">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="addRecomendacao(garage)">Adicionar Recomenação</button><br>
                 </div>
                 <div class="form-groupLogin">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="cadastro()">Visualizar Recomendações</button><br>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="buscaReview(garage)">Visualizar Recomendações</button><br>
                 </div>
                 <div class="form-groupLogin">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="home()">Voltar</button><br>

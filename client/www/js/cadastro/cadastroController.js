@@ -8,14 +8,19 @@ angular.module('meuMecanico').controller("cadastroController", ["$scope", "$stat
         $scope.cadastrarCliente = function (cliente) {
             usuarioService.cadastroCliente(cliente).then(function (response) {
                 console.log("Response: ", response.data);
+                    $state.go("login");
             });
         };
 
         $scope.oficinaService = function (oficina) {
             oficinaService.cadastroOficina(oficina).then(function (response) {
-                console.log("Response: ", response.data);
+                $state.go("login");
             });
         };
+
+        $scope.login = function () {
+            $state.go("login");
+        }
 
         init();
 
