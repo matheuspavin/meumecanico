@@ -11,11 +11,6 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
             templateUrl: 'templates/cadastro.html',
             controller: 'cadastroController'
         })
-        .state('home', {
-            url: '/home',
-            templateUrl: 'templates/home.html',
-            controller: 'homeController'
-        })
         .state('editOficina', {
             url: '/editoficina',
             templateUrl: 'templates/editOficina.html',
@@ -48,6 +43,20 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
             controller: 'reviewController',
             params: {
                 obj: null
+            }
+        })
+        .state('menu', {
+            url: '/menu',
+            templateUrl: 'templates/menu.html',
+            abstract: true
+        })
+        .state('menu.home', {
+            url: '/home',
+            views: {
+                'side-menu': {
+                    templateUrl: 'templates/home.html',
+                    controller: 'homeController'
+                }
             }
         })
 

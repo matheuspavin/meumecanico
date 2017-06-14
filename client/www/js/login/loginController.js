@@ -4,7 +4,7 @@ angular.module('meuMecanico').controller("loginController", ["$rootScope", "$sco
         var url = 'http://localhost:8081/signin';
         $http.post(url, user).then(function (response) {
             $window.localStorage.token = response.data;
-            $state.go('home');
+            $state.go('menu.home');
         }).catch(function (error) {
             $scope.message = "Erro nos dados de acesso! Favor tente novamente.";
         })
