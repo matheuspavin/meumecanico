@@ -17,12 +17,12 @@ angular.module('meuMecanico').controller("homeController", ["$scope", "$state", 
         };
 
         $scope.visualizarOficina = function (selectedGarage) {
-            console.log("chamou");
-            $state.go('visualizaOficina', { obj: selectedGarage });
+            console.log("chamou", selectedGarage);
+            $state.go('menu.visualizaOficina', { obj: selectedGarage });
         };
 
         $scope.buscaReview = function (selectedGarage) {
-          $state.go('visualizarcomentarios', { obj: selectedGarage });
+          $state.go('menu.visualizarcomentarios', { obj: selectedGarage });
         };
         init();
 

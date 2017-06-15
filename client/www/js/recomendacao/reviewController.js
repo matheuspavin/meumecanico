@@ -9,12 +9,12 @@ angular.module('meuMecanico').controller("reviewController", ["$scope", "$state"
         };
 
         $scope.home = function () {
-            $state.go('home');
+            $state.go('menu.home');
         };
 
         $scope.visualizarOficina = function (selectedGarage) {
             console.log("chamou");
-            $state.go('visualizaOficina', { obj: selectedGarage });
+            $state.go('menu.visualizaOficina', { obj: selectedGarage });
         };
         
         $scope.buscaReview = function (selectedGarage) {

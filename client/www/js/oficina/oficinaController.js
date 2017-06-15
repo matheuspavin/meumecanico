@@ -21,7 +21,7 @@ angular.module('meuMecanico').controller("oficinaController", ["$scope", "$state
         };
 
         $scope.back = function () {
-            $state.go('home');
+            $state.go('menu.home');
         };
 
         init();

@@ -5,24 +5,21 @@ angular.module('meuMecanico').controller("visualizaOficinaController", ["$scope"
         $scope.garage = {};
 
         var init = function () {
+            console.log($stateParams.obj);
             $scope.garage = $stateParams.obj;
         };
 
         $scope.home = function () {
-            $state.go('home');
-        };
-
-        $scope.visualizarRecomendacao = function () {
-            $state.go('');
+            $state.go('menu.home');
         };
 
         $scope.addRecomendacao = function (garage) {
             console.log("addRecomendacao: ", garage);
-            $state.go('recomendacao', { obj: garage });
+            $state.go('menu.recomendacao', { obj: garage });
         };
 
         $scope.buscaReview = function (selectedGarage) {
-            $state.go('visualizarcomentarios', { obj: selectedGarage });
+            $state.go('menu.visualizarcomentarios', { obj: selectedGarage });
         };
 
         init();

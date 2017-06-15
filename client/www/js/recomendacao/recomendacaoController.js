@@ -10,10 +10,11 @@ angular.module('meuMecanico').controller("recomendacaoController", ["$scope", "$
             console.log("$stateParams:Ç ", $stateParams);
             $scope.rec.garage = $stateParams.obj;
             $scope.findClient();
+            input.oninput();
         };
 
         $scope.home = function () {
-            $state.go('home');
+            $state.go('menu.home');
         };
 
         var input = document.getElementById('input'), output = document.getElementById('output');
@@ -28,7 +29,7 @@ angular.module('meuMecanico').controller("recomendacaoController", ["$scope", "$
 
         $scope.findClient = function () {
             clientService.findClient().then(function (response) {
-                console.log("FindClientController", response.body);
+                console.log("FindClientController", responses);
                 $scope.rec.client = response.data[0];
             });
         };
@@ -49,7 +50,7 @@ angular.module('meuMecanico').controller("recomendacaoController", ["$scope", "$
             console.log("Recomnedacao: ", recomendacao);
             recomendacaoService.cadastroRecomendacao(recomendacao).then(function (response) {
                 console.log("cadastroRecomendacao", response);
-                $state.go("home");
+                $state.go("menu.home");
 
             });
 

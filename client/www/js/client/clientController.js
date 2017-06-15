@@ -22,7 +22,7 @@ angular.module('meuMecanico').controller("clientController", ["$scope", "$state"
         };
 
         $scope.back = function () {
-            $state.go('home');
+            $state.go('menu.home');
         };
 
         init();
