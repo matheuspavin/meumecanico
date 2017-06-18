@@ -1,7 +1,9 @@
-angular.module('meuMecanico').controller("oficinaController", ["$scope", "$state", "oficinaService",
-    function ($scope, $state, oficinaService) {
+angular.module('meuMecanico').controller("oficinaController", ["$scope", "$state", "oficinaService", "clientService",
+    function ($scope, $state, oficinaService, clientService) {
         $scope.erro = "";
         $scope.success = "";
+        $scope.client = true;
+
         var init = function () {
             $scope.findGarage();
         };
@@ -24,6 +26,15 @@ angular.module('meuMecanico').controller("oficinaController", ["$scope", "$state
             $state.go('menu.home');
         };
 
+        $scope.findUser = function () {
+            clientService.findClient().then(function (response) {
+                console.log("Response xD: ", response);
+                if (response.data.length < 1) {
+                    $scope.client = false;
+                }
+
+            });
+        }
         init();
 
     }]);

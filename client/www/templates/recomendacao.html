@@ -15,27 +15,8 @@
                 <hr>
                 <div class="form-group">
                     <label>Nota</label>
-                    <input type="range" class="form-control" ng-model="rec.grade" id="input" type="range" min="0" max="4"
-                        step="1">{{rec.grade}}
-                    <!--                    <div class="row">
-                        <td id="output1" style="padding:25px"></td>
-                        <td id="output2" style="padding:50px"></td>
-                        <td id="output3"><th</td>
-                        <td id="output4"></td>
-                        <td id="output5"></td>
-                    </div>-->
-                    <table style="width:100%">
-                        <tr>
-                            <th style="width: 4%"></th>  
-                            <th id="output1" style="width:22.5%"></th>
-                            <th id="output2" style="width:22%"></th>
-                            <th id="output3" style="width:22.5%"></th>
-                            <th id="output4" style="width:21.5%"></th>
-                            <th id="output5" style="width:22%"></th>
-                        </tr>
-                    </table>
+                    <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
                 </div>
-
                 <hr>
                 <div class="form-group">
                     <label>Recomendação:</label>

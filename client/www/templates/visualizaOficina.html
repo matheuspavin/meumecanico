@@ -34,7 +34,7 @@
                 </div>
                 <br>
                 <div class="form-groupLogin">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="addRecomendacao(garage)">Adicionar Recomenação</button><br>
+                    <button type="submit" ng-if="client" class="btn btn-primary btn-lg btn-block" ng-click="addRecomendacao(garage)">Adicionar Recomenação</button><br>
                 </div>
                 <div class="form-groupLogin">
                     <button type="submit" class="btn btn-primary btn-lg btn-block" ng-click="buscaReview(garage)">Visualizar Recomendações</button><br>

@@ -1,0 +1,30 @@
+<div style="height: 100vh; width: 100vw; position: absolute;" class="background-img ">
+    <div>
+        <ion-content padding="true" scroll="true" drag-content="false">
+            <legend style="text-align: left">Minhas Recomendações</legend>
+            <div class="container-fluid">
+                <legend style="font-weight: bold">{{client.name}}</legend>
+                <div ng-repeat="review in reviews">
+                    <div style="background-color: white">
+                        <div class="w3-panel w3-card-4">
+                            <label>Oficina: </label>
+                            <span>{{review.name}}</span><br>
+                            <label>Data Recomendação: </label>
+                            <span>{{review.creation_review | date: "dd/MM/yyyy" }}</span><br>
+                            <label>Nota: </label>
+                            <span>{{review.grade}}</span><br>
+                            <label>Descrição: </label>
+                            <span>{{review.review}}</span><br>
+                            <p class="text-center">
+                                <button type="button" ng-click="visualizarOficina(review.id_garage)" class="btn btn-primary btn-sm">Visualizar Oficina</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center">
+                    <button type="button" ng-click="home()" class="btn btn-primary btn-sm">Voltar</button>
+                </p>
+            </div>
+        </ion-content padding="false" scroll="true" drag-content="true">
+    </div>
+</div>

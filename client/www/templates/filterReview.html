@@ -1,8 +1,19 @@
 <div style="height: 100vh; width: 100vw; position: absolute;" class="background-img ">
     <ion-content padding="true" scroll="true" drag-content="false">
-        <legend style="text-align: left">Lista de Oficinas</legend>
+        <legend style="text-align: left">Busca Oficinas</legend>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="name" placeholder="Nome da oficina">
+        </div>
+        <label>Pesquisar por média:
+            <input type="checkbox" ng-model="enableMedia" ng-init = 'false'>{{media}}
+        </label></br>
+        <div class="form-group" ng-if="enableMedia">
+            <label for="">&nbsp;</label>
+            <label>Média maior que: </label>
+            <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
+        </div>
         <div class="container-fluid">
-            <div ng-repeat="garage in garages">
+            <div ng-repeat="garage in garages | filter:name | filter: (enableMedia || '' ) && verificaNota ">
                 <div style="background-color: white">
                     <div class="w3-panel w3-card-4">
                         <h4 style="font-weight: bold">{{garage.name}}</h4><br>

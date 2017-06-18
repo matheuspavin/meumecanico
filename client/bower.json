@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "bootstrap": "boostrap#^3.3.7",
-    "angular-sidebar": "^1.1.0"
+    "angularjs-slider": "^6.2.2",
+    "jwt-decode": "^2.2.0"
   }
 }

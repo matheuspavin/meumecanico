@@ -3,11 +3,14 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
     $stateProvider
         .state('menu', {
             url: '/menu',
+            controller: 'menuController',
             templateUrl: 'templates/menu.html',
+            cache: false,
             abstract: true
         })
         .state('menu.home', {
             url: '/home',
+            cache: false,
             views: {
                 'side-menu': {
                     templateUrl: 'templates/home.html',
@@ -17,7 +20,8 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
         })
         .state('menu.visualizarcomentarios', {
             url: '/visualizarcomentarios',
-            params: {obj: null},
+            params: { obj: null },
+            cache: false,
             views: {
                 'side-menu': {
                     templateUrl: 'templates/visualizarComentarios.html',
@@ -27,11 +31,13 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
         })
         .state('login', {
             url: '/login',
+            cache: false,
             templateUrl: 'templates/login.html',
             controller: 'loginController'
         })
         .state('cadastro', {
             url: '/cadastro',
+            cache: false,
             templateUrl: 'templates/cadastro.html',
             controller: 'cadastroController'
         })
@@ -55,7 +61,9 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
         })
         .state('menu.visualizaOficina', {
             url: '/visualizaoficina',
-            params: {obj: null},
+            cache: false,
+            params: { obj: null },
+            cache: false,
             views: {
                 'side-menu': {
                     templateUrl: 'templates/visualizaOficina.html',
@@ -66,10 +74,33 @@ angular.module('meuMecanico').config(function ($stateProvider, $urlRouterProvide
         .state('menu.recomendacao', {
             url: '/recomendacao',
             params: { obj: null },
+            cache: false,
             views: {
                 'side-menu': {
                     templateUrl: 'templates/recomendacao.html',
                     controller: 'recomendacaoController'
+                }
+            }
+        })
+        .state('menu.visualizarcomentariosclient', {
+            url: '/visualizarcomentariosclient',
+            cache: false,
+            params: { obj: null },
+            views: {
+                'side-menu': {
+                    templateUrl: 'templates/visualizarComentariosClient.html',
+                    controller: 'visualizarComentariosClientController'
+                }
+            }
+        })
+        .state('menu.filterReview', {
+            url: '/filterReview',
+            cache: false,
+            params: { obj: null },
+            views: {
+                'side-menu': {
+                    templateUrl: 'templates/filterReview.html',
+                    controller: 'filterReviewController'
                 }
             }
         })
